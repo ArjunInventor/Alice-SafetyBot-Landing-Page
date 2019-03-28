@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+                <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <title>Alice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="theme-color" content="#283593" />
+    <meta charset="UTF-8">
+   <meta name="description" content="Introducing ALICE – the Artificial Intelligence (AI) powered Virtual Assistant aimed at helping you find answers to your questions related to being safe on Internet via chatting (voice or text).">
+  <meta name="keywords" content="Internet Safety, Alice Chat Bot, Alice, Internet Security, How to be safe online, Internet supervisor">
+  <meta name="author" content="Arjun">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">  <link rel="stylesheet" href="css/materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Assistant:800&amp;subset=hebrew" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5a5843d139ea20001300988a&product=inline-share-buttons' async='async'></script>
+
+<script>
+    
+      $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+    
+    
+</script>
+
+<script>
+
+  
+$(document).ready(function(){
+	  
+	 $("#dis").fadeIn(2000);
+	 setTimeout($("#bot").fadeIn(1000), 10000);
+	 
+});
+</script>
+
+<script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 100;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+
+<style type="text/css">
+
+
+* { color:#fff; text-decoration: none;}
+
+
+.mask{
+   position: relative;
+   width: 89%;
+   height: 100%;
+       line-height: 80px;
+
+}
+.header{
+   float: left;
+   width: 100%;
+   height: 70px;
+}
+.colleft{
+   position: relative;
+   width: 100%;
+   right: 40%;
+}
+
+.footer{
+   float: left;
+   width: 100%;
+}
+
+ #hl {
+                opacity: 1;
+            }
+            
+            
+body {
+    height:100%;
+   padding: 0px;
+   margin: 0px;
+   font-size: 90%;
+   background-color: #1a237e;
+   
+                width: 100%;
+
+                background-image: url("/img/bg3.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100%; 
+                 background-size: cover;
+                background-position: center; 
+	}
+
+	#div1 {
+		 width: 100%;
+  text-align: left;
+	}
+
+	#p1 { margin:0;
+	padding-top:20px;
+    padding-bottom: 30px; 
+	    font-family: Pacifico; color: White; font-size: 50px; font-weight:300;
+	}
+
+
+
+	#p3 { margin:0;
+	line-height: 20px; }
+
+
+	#div2 {
+
+	}
+	
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+#p2 {
+    font-family: 'Open Sans', sans-serif; vertical-align: baseline; text-align:justify; font-size: 16px; color: white;
+
+}
+
+#iframe {
+margin-top: 20px;
+margin-bottom: 30px;
+
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
+
+-webkit-box-shadow: 2px 2px 56px -10px rgba(0,0,0,0.61);
+-moz-box-shadow: 2px 2px 56px -10px rgba(0,0,0,0.61);
+box-shadow: 2px 2px 56px -10px rgba(0,0,0,0.61);
+
+}
+
+#onlymobile {
+visibility: hidden;height: 1px;
+}
+
+#iframemobile {
+            visibility: hidden;
+height: 1px;
+margin-top: 0px;
+margin-bottom: 0px;
+width:100%;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
+
+-webkit-box-shadow: 2px 2px 56px -10px rgba(0,0,0,0.61);
+-moz-box-shadow: 2px 2px 56px -10px rgba(0,0,0,0.61);
+box-shadow: 2px 2px 56px -10px rgba(0,0,0,0.61);
+
+}
+
+.page-footer-blue{ position: absolute; padding-top:20px; padding-bottom:0px; color:#fff; background-color: #b39ddb; 
+    
+}
+.page-footer-blue .footer-copyright{ position: absolute; overflow:hidden;min-height:50px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding:10px 0px;color:rgba(255,255,255,0.8);}
+
+footer 
+{
+    
+     position: fixed;
+     bottom:0;
+    left: 0;
+    width: 100%;
+
+}
+ .push {
+     height:0px;
+ }
+
+.content{
+    
+      min-height: calc(100vh - 70px);
+}
+
+a {
+    padding:20px; color:white; font-size: 16px; opacity: 0.8;
+}
+
+#tabs {
+        padding-right:50px;
+        font-family: Roboto; color:white; position: absolute; padding-top: 10px; text-align:right; width:100%;
+}
+
+
+a:hover {
+opacity: 1;    
+}
+
+#dis {
+    display:none; padding-left:100px; padding-right: 100px;
+}
+#talk {
+    visibility: hidden;
+height: 1px;
+}
+#share {
+    padding-top:0px;
+}
+
+
+@media screen and (max-width: 992px) {
+#onlymobile {
+visibility: visible;
+
+}
+
+    #iframemobile {
+        visibility: visible;
+        height: 100%;
+margin-top: 20px;
+margin-bottom: 30px;
+width:100%;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
+
+-webkit-box-shadow: 2px 2px 56px -10px rgba(0,0,0,0.61);
+-moz-box-shadow: 2px 2px 56px -10px rgba(0,0,0,0.61);
+box-shadow: 2px 2px 56px -10px rgba(0,0,0,0.61);
+
+}
+
+    #p1{font-family: Pacifico;
+        padding-top:0px;
+        padding-bottom:10px;
+    }
+    
+#bot { 
+display:none;
+visibility: hidden;
+}
+#tabs {
+    width:100%
+    text-align: right;
+    padding-right:20px;
+}
+
+a {
+    padding:10px; font-size: 14px; 
+}
+
+#dis {
+    padding-left:80px; padding-right: 80px;
+}
+
+#bot {
+    height:1px;
+}
+#iframe {
+    height:1px;
+}
+
+#share {
+    width:100%;
+    height:30px;
+}
+
+#talk {
+    visibility: visible;
+    height: 35px;
+
+}
+#share {
+    padding-top:20px;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+    #tabs {
+     padding-right:5px;    
+    }
+    
+    #dis {
+    padding-left:20px; padding-right: 20px;
+}
+#p1 {font-family: Pacifico;}
+
+    
+}
+
+</style>
+
+
+</head>
+<body>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a58e36b8be39eb5"></script> 
+
+<div class="header" style="">
+    <p id="tabs" style="">
+         <a id="hl" href="../index.html">ALICE</a> 
+        <a  href="../contribute.php">Contribute</a> 
+        <a href="../HallOfFame.php">Hall Of Fame</a>
+        <a href="../partner.html">Partner</a>
+        </p>
+      
+     
+     </div>
+    <div class="row content">
+      
+       <div  class="col s12 m12 l8 xl8" id="dis" >
+           <p id="p1" style="">Alice</p> 
+            <p id="p2" >ALICE – the Artificial Intelligence (AI) powered Virtual Assistant (Chatbot) designed to help you learn the techniques to be safe online in the most natural way – by chatting (voice or text)!
+<br><br>ALICE was designed with a vision to empower you, the digital citizens of today, with the required knowledge that will help you to manage your own digital lives in the most secure manner. The program is basically aimed at children and young adults like you who have just started using the Internet and its services (such as E-Mail, World Wide Web, and Social Media).  <br><br>Got Google Assistant? Just say "Talk to Alice Chatbot"</p>
+
+ <h6 style=" line-height: 10px;font-size:20px; font-family:Roboto;">What you can ask...</h6>
+              
+
+<h1 style="margin:0px; line-height: 0px;  font-size:20px; font-family:Roboto;">
+  <p class="typewrite" style="line-height:20px;" data-period="500" data-type='[ "What is Phishing?", 
+  "Suggest some videos about Internet Safety.", "How do I ensure a strong password?", "What programs can harm my PC?", "What is Cyber Bullying?"]'>
+    <span class="wrap"></span>
+  </p>
+</h1>
+               <div id="onlymobile" class="divider"></div>
+               <img id="iframemobile" src="/img/gif.gif" width="300" height="500" alt="">
+          <div id="share" class="addthis_inline_share_toolbox"></div>
+                      
+    </div> 
+    
+      <div class="col s4 m1 l4" id="bot" style="right:50px; padding-right:50px; padding-top:10px;" >
+            <img id="iframe" src="/img/gif.gif" width="300" height="500" alt="">
+        </div>
+
+</div>
+<div class="push"></div>
+
+            
+</body>
+</html>
+
+
